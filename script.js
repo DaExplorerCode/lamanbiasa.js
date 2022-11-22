@@ -3,6 +3,9 @@ let menutapiteks;
 var umur = null;
 var angka1 = null;
 var angka2 = null;
+//defind the command in here
+const command = {checknum:"pengecekangka", checkoddnum:"pengecekangkaganjil", checkdrivelisence:"pengecekumuruntuksim", repeatxt:"mengulangteks", randomnum:"mengacakangka", guess_age:"penebakumur"};
+//start the main script
 document.write("<i>memunculkan hasil dari prompt yang kamu interaksikan di LamanBiasa.js...</i>");
 document.write("</br>");
 document.write("</br>");
@@ -10,7 +13,7 @@ document.write("</br>");
 document.write("</br>");
 menutapiteks = prompt("kita mau testing apa nih");
 document.title = "LamanBiasaJS - JS Testing";
-if (menutapiteks === "pengecekangka") {
+if (menutapiteks === command.checknum) {
   document.write("user memilih menu tentang pengecek angka 😀🔢")
   document.write("</br>")
   var angka1 = prompt("masukan angka pertama")
@@ -31,7 +34,7 @@ if (menutapiteks === "pengecekangka") {
     document.write("lah belom ngisi yang angka 2")
   }
 }
-if (menutapiteks === "pengecekangkaganjil") {
+if (menutapiteks === command.checkoddnum) {
   document.write("user memilih menu tentang pengecek angka 😀🔢 (VERSI GANJIL)")
   document.write("</br>")
   var angkaganjiltester = prompt("masukan angka yang mau dideteksi oleh LamanBiasa.js")
@@ -45,7 +48,7 @@ if (menutapiteks === "pengecekangkaganjil") {
     document.write("lah belom ngisi")
   }
 }
-if (menutapiteks === "pengecekumuruntuksim") {
+if (menutapiteks === command.checkdrivelisence) {
   document.write("user memilih menu tentang pengecek umur untuk sim")
   document.write("</br>")
   var umuruntuksim = prompt("masukan umur (dengan format angka) (BOLEH NGASAL SA NGETIK NOMOR)")
@@ -59,7 +62,7 @@ if (menutapiteks === "pengecekumuruntuksim") {
     document.write("lah belom ngisi")
   }
 }
-if (menutapiteks === "mengulangteks") {
+if (menutapiteks === command.repeatxt) {
   document.write("user memilih menu tentang mengulang teks")
   document.write("</br>")
   document.write("</br>")
@@ -79,7 +82,7 @@ if (menutapiteks === "mengulangteks") {
     }
   }
 }
-if (menutapiteks === "mengacakangka") {
+if (menutapiteks === command.randomnum) {
   document.write("user memilih menu tentang mengacak angka")
   document.write("</br>")
   document.write("</br>")
@@ -88,7 +91,7 @@ if (menutapiteks === "mengacakangka") {
   document.write("Angkanya adalah: " + Math.floor(Math.random() * angkarandom))
 }
 
-if (menutapiteks === "penebakumur") {
+if (menutapiteks === command.guess_age) {
   document.write("user memilih menu tentang penebak umur")
   document.write("</br>")
   document.write("</br>")

@@ -60,12 +60,24 @@
     onClick="window.location.reload(true)">
   </br>
   </br>
-  <p style="background-color: green; color: whitesmoke; size:9;  font-weight: bolder"> <u> <b>
+  <p id ="web_title" style="background-color: green; color: whitesmoke; size:9;  font-weight: bolder"> <u> <b>
         LamanBiasa.js
       </b> </u>
   </p>
   </br>
   </br>
+  <button type="button"
+onclick="seeDate()">
+liat waktu </button>
+<script>
+function seeDate() {
+document.getElementById("web_title").innerHTML = Date();
+}
+setTimeout(showtitle, 3000);
+function showtitle() {
+    document.getElementById("web_title").innerHTML = "LamanBiasa.JS";
+  }
+</script>
 <script src="some_library.js"></script>
   <script src="script.js"></script>
   <script src="https://replit.com/public/js/replit-badge.js" theme="dark" defer></script>
